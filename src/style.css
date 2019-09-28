@@ -15,8 +15,22 @@
     resize: none;
     padding: 20px;
 }
+.code-editor-container{
+    margin-top: 20px;
+}
+
+.note{
+    font-style: italic;
+    font-size: 12px;
+}
 
 .language-js{
-    width: 420px;
+    
+    min-width: 300px;
+    max-width: 520px;
     background-color: #eee;
+}
+
+.customcontent{
+    margin: 4px;
 }

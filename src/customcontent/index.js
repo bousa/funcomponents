@@ -35,15 +35,25 @@ const CustomContent = ({ title }) => {
 
     const initCode = `
     <div> 
-        <h3 className="title">${title}</h3>
-        <Clickable afterClick="yup!" beforeClick="you can click me" />
-    </div>
+    <h3 className="title">${title}</h3>
+    <Clickable afterClick="yup!" beforeClick="click me!" />
+    <Counter start={1} step={4} />
+    
+    <Counter start={2} step={3} />
+    
+    <Counter start={3} step={2} />
+    
+    <Counter start={4} step={1} />
+
+
+    <Cat name="gtitosho"/>
+</div>
     `
 
 
     let [code, setCode] = useState(initCode)
 
-    return <div className="hello">
+    return <div className="customcontent">
         
     <Parser code={code} />
 

@@ -6,7 +6,7 @@ import CustomContent from './customcontent';
 function App() {
   return (
     <div className="App">
-      <CustomContent title={"hello world"}/>
+      <CustomContent title={`developer {by}`}/>
     </div>
   );
 }

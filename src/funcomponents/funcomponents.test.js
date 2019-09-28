@@ -17,6 +17,13 @@ const renderClickable =(props)=>{
     )
 }
 
+
+const renderCat =(props)=>{
+    return mount(
+      <funcomponents.Cat {...props}/>
+    )
+}
+
 describe('Counter component test', () => {
 
     it('should render an error when a prop missed', () => {
@@ -59,6 +66,23 @@ describe('Clickable component test', () => {
        expect(tree.find("p")).toHaveText(beforeClick)
        tree.find("p").simulate("click")
        expect(tree.find("p")).toHaveText(afterClick)
+        
+    });
+    
+});
+
+
+describe('Cat component test', () => {
+
+    it('should render cat name', () => {
+
+        let tree = renderCat({
+            name:"sari"
+        })
+
+       expect(tree.find("pre").length).toBe(1)
+
+       //expect(tree.find("pre")).toHaveText("sari")
         
     });
     

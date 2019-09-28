@@ -16,4 +16,11 @@ export default {
 
         return <button onClick={e=>setA(a + step)}>{a}</button>
     },
+    Cat:({ name }) => {
+        return <pre>{`
+|\\---/|
+| o_o | ${name || ""}
+ \\_^_/
+        `}</pre>
+    },
 }

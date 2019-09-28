@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       
       <CustomContent title={`developer {by}`}/>
-      <a href="https://github.com/apotox/funcomponents.git" target="_blank">Github</a>
+      <a href="https://github.com/apotox/funcomponents.git">Github</a>
     </div>
   );
 }

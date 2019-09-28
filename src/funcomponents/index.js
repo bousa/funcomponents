@@ -40,7 +40,7 @@ export default {
 
 
     Bhim: {
-        Component: ()=><h1>BHIM</h1>,
-        sample: `\n   <Bhim/>\n`
+        Component: ({name})=><h1>{name} ya BHIM</h1>,
+        sample: `\n   <Bhim name="hou"/>\n`
     },
 }

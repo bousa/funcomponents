@@ -7,22 +7,37 @@ import funcomponents from '.';
 
 const renderCounter =(props)=>{
     return mount(
-      <funcomponents.Counter {...props}/>
+      <funcomponents.Counter.Component {...props}/>
     )
 }
 
 const renderClickable =(props)=>{
     return mount(
-      <funcomponents.Clickable {...props}/>
+      <funcomponents.Clickable.Component {...props}/>
     )
 }
 
 
 const renderCat =(props)=>{
     return mount(
-      <funcomponents.Cat {...props}/>
+      <funcomponents.Cat.Component {...props}/>
     )
 }
+
+
+describe('Funcomponent validation', () => {
+    it('should all funcomponents have a component and a sample property', () => {
+
+        Object.keys(funcomponents).forEach(c=>{
+            expect(typeof funcomponents[c].sample).toBe("string")
+            expect(typeof funcomponents[c].Component).toBe("function")
+
+            expect(funcomponents[c].sample).toContain(c)
+        })
+
+        
+    });
+});
 
 describe('Counter component test', () => {
 
@@ -31,6 +46,7 @@ describe('Counter component test', () => {
             start:0
         })
        expect(tree.find("button")).not.toExist()
+       
     });
 
 

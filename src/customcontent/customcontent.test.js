@@ -11,7 +11,7 @@ const renderCustomComponent =(props)=>{
   
 
 
-describe("create react rendered #bysafi",()=>{
+describe("create h3 title contains 'safi'",()=>{
 
     it("render <CustomComponent> with custom title",()=>{
       //given

@@ -1,26 +1,46 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 export default {
-    Clickable:({ beforeClick,afterClick }) => {
+    //Clickable Component
+    Clickable: {
+        Component: ({ beforeClick, afterClick }) => {
 
-        const [a,setA] = useState(beforeClick || "")
+            const [a, setA] = useState(beforeClick || "")
 
-        return <p onClick={e=>setA(afterClick || "")}>{a}</p>
+            return <p onClick={e => setA(afterClick || "")}>{a}</p>
+        },
+        sample: `\n   <Clickable beforeClick="click me" afterClick="Yup!" />\n`
     },
-    Counter:({ start,step }) => {
-        const [a,setA] = useState(start)
-        
-        if(start == undefined || step == undefined) return <span>error!</span>
+    //Counter COMPONENT
+    Counter: {
 
-        
+        Component: ({ start, step }) => {
+            const [a, setA] = useState(start)
 
-        return <button onClick={e=>setA(a + step)}>{a}</button>
+            if (start == undefined || step == undefined) return <span>error!</span>
+
+
+
+            return <button onClick={e => setA(a + step)}>{a}</button>
+        },
+        sample: `\n   <Counter start={0} step={5} />\n`
     },
-    Cat:({ name }) => {
-        return <pre>{`
-|\\---/|
-| o_o | ${name || ""}
- \\_^_/
-        `}</pre>
+    //CAT COMPONENT
+    Cat: {
+        Component: ({ name }) => {
+
+            return <pre>{`
+    |\\---/|
+    | o_o | ${name || ""}
+     \\_^_/
+            `}</pre>
+        },
+        sample: `\n   <Cat name="gtitosho" />\n`
+    },
+
+
+    Bhim: {
+        Component: ()=><h1>BHIM</h1>,
+        sample: `\n   <Bhim/>\n`
     },
 }

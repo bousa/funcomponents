@@ -1,5 +1,9 @@
 .title{
-    color: black;
+    color: #fff;
+    text-align: center;
+    background: #49a64b;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .code{
@@ -22,6 +26,7 @@
 .note{
     font-style: italic;
     font-size: 12px;
+    margin: 4px;
 }
 
 .language-js{
@@ -33,4 +38,16 @@
 
 .customcontent{
     margin: 4px;
+}
+
+.toolbar{
+    margin: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+.description{
+    font-size: 12px;
+    max-width: 520px;
+    color:#ccc;
 }

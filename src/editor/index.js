@@ -4,14 +4,27 @@ import CodeEditor from 'react-simple-code-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
+import DropList from './droplist';
+import funcomponents from '../funcomponents';
 
 
 const Editor = ({ html, onChange }) => {
 
+
+  const insertComp=(compName)=>{
+
+    onChange(html + funcomponents[compName].sample)
+
+  }
+
   return <div className="code-editor-container">
 
     
-    <p className="note"><font color="red">*</font>You can edit this JSX code and see realtime updates</p>
+    <div className="toolbar">
+    <span className="note"><font color="red">*</font>You can edit this JSX code and see realtime updates</span>
+    <DropList onSelect={insertComp}/>
+    </div>
+
     <CodeEditor
       className="language-js" 
       value={html}
@@ -23,6 +36,11 @@ const Editor = ({ html, onChange }) => {
         fontSize: 12,
       }}
     />
+
+
+    <div className="description">
+      <i>by using React 16.8+ the feature of Hooks and function component made it easy to control and reuse components</i>
+    </div>
 
     </div>
 
